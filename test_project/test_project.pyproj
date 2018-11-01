@@ -32,6 +32,9 @@
   <ItemGroup>
     <Compile Include="landing\admin.py" />
     <Compile Include="landing\apps.py" />
+    <Compile Include="landing\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="landing\migrations\__init__.py" />
     <Compile Include="landing\models.py" />
     <Compile Include="landing\tests.py" />
@@ -47,21 +50,21 @@
     <Compile Include="test_project\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="landing\static\css\bootstrap.min.css" />
+    <Content Include="landing\static\js\bootstrap.min.js" />
+    <Content Include="landing\static\style.css" />
     <Content Include="landing\templates\landing\index.html" />
     <Content Include="landing\templates\landing\landing.html" />
     <Content Include="requirements.txt" />
-    <Content Include="static\css\bootstrap.min.css" />
-    <Content Include="static\js\bootstrap.min.js" />
-    <Content Include="static\style.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="landing\" />
     <Folder Include="landing\migrations\" />
+    <Folder Include="landing\static\" />
+    <Folder Include="landing\static\css\" />
+    <Folder Include="landing\static\js\" />
     <Folder Include="landing\templates\" />
     <Folder Include="landing\templates\landing\" />
-    <Folder Include="static\" />
-    <Folder Include="static\css\" />
-    <Folder Include="static\js\" />
     <Folder Include="test_project\" />
   </ItemGroup>
   <ItemGroup>
