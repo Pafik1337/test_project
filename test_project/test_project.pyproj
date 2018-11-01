@@ -3,6 +3,7 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>test_project</Name>
     <RootNamespace>test_project</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -29,6 +30,16 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="landing\admin.py" />
+    <Compile Include="landing\apps.py" />
+    <Compile Include="landing\migrations\__init__.py" />
+    <Compile Include="landing\models.py" />
+    <Compile Include="landing\tests.py" />
+    <Compile Include="landing\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="landing\views.py" />
+    <Compile Include="landing\__init__.py" />
     <Compile Include="manage.py" />
     <Compile Include="test_project\__init__.py" />
     <Compile Include="test_project\settings.py" />
@@ -36,10 +47,33 @@
     <Compile Include="test_project\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="landing\templates\landing\index.html" />
+    <Content Include="landing\templates\landing\landing.html" />
     <Content Include="requirements.txt" />
+    <Content Include="static\css\bootstrap.min.css" />
+    <Content Include="static\js\bootstrap.min.js" />
+    <Content Include="static\style.css" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="landing\" />
+    <Folder Include="landing\migrations\" />
+    <Folder Include="landing\templates\" />
+    <Folder Include="landing\templates\landing\" />
+    <Folder Include="static\" />
+    <Folder Include="static\css\" />
+    <Folder Include="static\js\" />
     <Folder Include="test_project\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.6</Version>
+      <Description>env (Python 3.6 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
