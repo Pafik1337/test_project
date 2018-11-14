@@ -9,15 +9,17 @@ class Status(models.Model):
 
     def __str__(self):  # название в админке
    
-            return "order %s" % self.id
+            return "order %s" % self.name
     class Meta:
         verbose_name = "Order status"
         verbose_name_plural = "Orders statuses"
 
 class Order(models.Model):
+    total_price = models.DecimalField(max_digits = 10, decimal_places= 2, default = 0)
     customer_name = models.CharField(max_length=64, blank = True, null = True, default = None)
     customer_email = models.EmailField(blank = True, null = True, default = None)
     customer_phone = models.CharField(max_length=48, blank = True, null = True, default = None)
+    customer_adress = models.CharField(max_length=128, blank = True, null = True, default = None)
     comments = models.TextField(blank = True, null = True, default = None)
     status = models.ForeignKey(Status)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
@@ -25,7 +27,7 @@ class Order(models.Model):
 
     def __str__(self):  # название в админке
    
-            return "order %s %s" % (self.id, self.status.name)
+            return "order %s| %s" % (self.id, self.status.name)
     class Meta:
         verbose_name = "Order"
         verbose_name_plural = "Orders"
@@ -33,6 +35,9 @@ class Order(models.Model):
 class ProductInOrder(models.Model):
     order = models.ForeignKey(Order, blank = True, null = True, default = None)
     product = models.ForeignKey(Product, blank = True, null = True, default = None)
+    nmb = models.IntegerField(default=1)
+    price_per_item = models.DecimalField(max_digits = 10, decimal_places= 2, default = 0)
+    total_price = models.DecimalField(max_digits = 10, decimal_places= 2, default = 0)
     is_active = models.BooleanField(default=True)
     created = models.DateTimeField(auto_now_add=True, auto_now=False)
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)

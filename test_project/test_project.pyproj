@@ -66,35 +66,46 @@
     <Compile Include="test_project\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="static\css\bootstrap.min.css" />
-    <Content Include="static\img\bg_image.jpg" />
-    <Content Include="static\js\bootstrap.min.js" />
-    <Content Include="static\style.css" />
+    <Content Include="landing\static\css\bootstrap.min.css" />
+    <Content Include="landing\static\img\bg_image.jpg" />
+    <Content Include="landing\static\js\bootstrap.min.js" />
+    <Content Include="landing\static\style.css" />
     <Content Include="landing\templates\landing\index.html" />
     <Content Include="landing\templates\landing\landing.html" />
     <Content Include="orders\templates\orders\index.html" />
     <Content Include="products\templates\products\index.html" />
+    <Content Include="products_images\cactus-cereus-peruvianus-maceta-9cm.jpg" />
+    <Content Include="products_images\cactus-cereus-peruvianus-maceta-9cm_CTfgoj4.jpg" />
+    <Content Include="products_images\cactus-cereus-peruvianus-maceta-9cm_Mw9IvN8.jpg" />
+    <Content Include="products_images\i_85_1.jpg" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="landing\" />
     <Folder Include="landing\migrations\" />
-    <Folder Include="static\" />
-    <Folder Include="static\css\" />
-    <Folder Include="static\js\" />
-    <Folder Include="static\img\" />
+    <Folder Include="landing\static\" />
+    <Folder Include="landing\static\css\" />
+    <Folder Include="landing\static\js\" />
+    <Folder Include="landing\static\img\" />
     <Folder Include="landing\templates\" />
     <Folder Include="landing\templates\landing\" />
+    <Folder Include="products_images\" />
     <Folder Include="orders\" />
     <Folder Include="orders\migrations\" />
     <Folder Include="orders\templates\" />
     <Folder Include="orders\templates\orders\" />
     <Folder Include="products\" />
     <Folder Include="products\migrations\" />
+    <Folder Include="products\static\" />
+    <Folder Include="products\products_images\" />
+    <Folder Include="products\static\products\" />
+    <Folder Include="products\static\products\media\" />
+    <Folder Include="products\static\products\media\products_images\" />
+    <Folder Include="products\static\products\products_images\" />
     <Folder Include="products\templates\" />
     <Folder Include="products\templates\products\" />
-    <Folder Include="static\media\" />
-    <Folder Include="static\media\products_images\" />
+    <Folder Include="landing\static\media\" />
+    <Folder Include="landing\static\media\products_images\" />
     <Folder Include="test_project\" />
   </ItemGroup>
   <ItemGroup>

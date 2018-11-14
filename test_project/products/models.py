@@ -8,7 +8,7 @@ class Product(models.Model):
 
     def __str__(self):  # название в админке
    
-            return "%s" % self.id
+            return "%s| %s" % (self.id, self.name)
     class Meta:
         verbose_name = "Product"
         verbose_name_plural = "Products"
@@ -22,7 +22,7 @@ class ProductImage(models.Model):
 
     def __str__(self):  # название в админке
    
-            return "%s" % self.id
+            return "%s| %s" % (self.id, self.product.name)
     class Meta:
         verbose_name = "Photo"
         verbose_name_plural = "Photos"
