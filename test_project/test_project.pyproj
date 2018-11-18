@@ -66,29 +66,46 @@
     <Compile Include="test_project\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="landing\static\css\bootstrap.min.css" />
-    <Content Include="landing\static\img\bg_image.jpg" />
-    <Content Include="landing\static\js\bootstrap.min.js" />
-    <Content Include="landing\static\style.css" />
+    <Content Include="landing\static\old\css\bootstrap.min.css" />
+    <Content Include="landing\static\old\img\bg_image.jpg" />
+    <Content Include="landing\static\old\img\slider0.jpg" />
+    <Content Include="landing\static\old\js\bootstrap.min.js" />
+    <Content Include="landing\static\old\landing.css" />
+    <Content Include="landing\static\old\style.css" />
+    <Content Include="landing\templates\base.html" />
+    <Content Include="landing\templates\footer.html" />
     <Content Include="landing\templates\landing\index.html" />
+    <Content Include="landing\templates\landing\home.html" />
     <Content Include="landing\templates\landing\landing.html" />
+    <Content Include="landing\templates\landing\product_item.html" />
+    <Content Include="landing\templates\navbar.html" />
     <Content Include="orders\templates\orders\index.html" />
     <Content Include="products\templates\products\index.html" />
+    <Content Include="products\templates\products\product.html" />
     <Content Include="products_images\cactus-cereus-peruvianus-maceta-9cm.jpg" />
     <Content Include="products_images\cactus-cereus-peruvianus-maceta-9cm_CTfgoj4.jpg" />
     <Content Include="products_images\cactus-cereus-peruvianus-maceta-9cm_Mw9IvN8.jpg" />
     <Content Include="products_images\i_85_1.jpg" />
     <Content Include="requirements.txt" />
+    <Content Include="static\media\products_images\cactus-cereus-peruvianus-maceta-9cm.jpg" />
+    <Content Include="static\static_dev\css\bootstrap.min.css" />
+    <Content Include="static\static_dev\css\landing.css" />
+    <Content Include="static\static_dev\css\style.css" />
+    <Content Include="static\static_dev\img\bg_image.jpg" />
+    <Content Include="static\static_dev\img\slider0.jpg" />
+    <Content Include="static\static_dev\js\bootstrap.min.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="landing\" />
     <Folder Include="landing\migrations\" />
     <Folder Include="landing\static\" />
-    <Folder Include="landing\static\css\" />
-    <Folder Include="landing\static\js\" />
-    <Folder Include="landing\static\img\" />
+    <Folder Include="landing\static\old\css\" />
+    <Folder Include="landing\static\old\js\" />
+    <Folder Include="landing\static\old\img\" />
+    <Folder Include="landing\static\old\" />
     <Folder Include="landing\templates\" />
     <Folder Include="landing\templates\landing\" />
+    <Folder Include="static\" />
     <Folder Include="products_images\" />
     <Folder Include="orders\" />
     <Folder Include="orders\migrations\" />
@@ -101,11 +118,16 @@
     <Folder Include="products\static\products\" />
     <Folder Include="products\static\products\media\" />
     <Folder Include="products\static\products\media\products_images\" />
-    <Folder Include="products\static\products\products_images\" />
     <Folder Include="products\templates\" />
     <Folder Include="products\templates\products\" />
     <Folder Include="landing\static\media\" />
-    <Folder Include="landing\static\media\products_images\" />
+    <Folder Include="static\media\" />
+    <Folder Include="static\media\products_images\" />
+    <Folder Include="static\static_dev\css\" />
+    <Folder Include="static\static_dev\img\" />
+    <Folder Include="static\static_dev\js\" />
+    <Folder Include="static\static_prod\" />
+    <Folder Include="static\static_dev\" />
     <Folder Include="test_project\" />
   </ItemGroup>
   <ItemGroup>

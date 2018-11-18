@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+   <div class="container">
+       <div class="row">
+           <div class="col-lg-6">
+                {% for image_item in product.productimage_set.all %}
+                    <div class="product-image-item">
+                        <img src=" {{image_item.image.url}}" class="img-fluid" />
+                    </div>
+                {% endfor %}
+           </div>
+           <div class="col-lg-6">
+               <h1 class="text-center">
+                   {{ product.name }}
+               </h1>
+
+               <div class="">
+                   <p>
+                       Price: EUR {{ product.price }}
+                   </p>
+                </div>
+                <div>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                      <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Description</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#delivery" role="tab" aria-controls="profile" aria-selected="false">Delivery</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content product-description-tabs" id="myTabContent">
+                      <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab"> {{ product.description }} </div>
+                      <div class="tab-pane fade" id="delivery" role="tabpanel" aria-labelledby="delivery-tab"> Free delivery worldwide in one week</div>
+                      <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">+371 1337 228 420</div>
+                    </div>
+                </div>
+                <div>
+                    <form id="form-buying-product" class="form-inline">
+                        <div class="form-group">
+                            <input type="number" class="form-control" />
+                        </div>
+                    
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success btn-buy">
+                            add to cart
+                            </button>
+                        </div>
+                    </form>
+                </div>
+           </div>
+       </div>
+   </div>
+{% endblock %}
